@@ -1,0 +1,17 @@
+Spring和Hibernate整合
+
+dbcp（数据库连接池）所需jar:
+commons-collections-3.1.jar
+commons-dbcp-1.2.2.jar
+commons-pool.jar
+
+Log4j日志记录所需jar:
+log4j-1.2.15
+commons-logging
+
+Oracle数据库连接所需jar:
+ojdbc15
+
+Spring 3.0.5所含jar:
+org.springframework.**
+...

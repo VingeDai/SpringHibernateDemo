@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- 通过class指定实体类和表的关系 -->
+	<class name="com.test.pojo.Cost" table="cost" dynamic-update="true">
+		<!-- 通过id元素指定主键属性和字段的关系: name：指定主键属性 column：指定主键字段 -->
+		<id name="id" type="integer" column="id">
+			<!-- 用来指明主键的生成方式 -->
+			<generator class="sequence">
+				<param name="sequence">cost_seq</param>
+			</generator>
+		</id>
+		<!-- 通过property元素指定属性和字段的关系： name：指定的是实体类中的属性 column：指定都是表中的字段 type：指定的是属性与字段转换时的类型 -->
+		<property name="name" type="string" column="name" />
+		<property name="baseDuration" type="integer" column="base_duration" />
+		<property name="baseCost" type="double" column="base_cost" />
+		<property name="unitCost" type="double" column="unit_cost" />
+		<property name="status" type="string" column="status" />
+		<property name="descr" type="string" column="descr" />
+		<property name="createTime" type="date" column="creatime" />
+		<property name="startTime" type="date" column="startime" />
+		<property name="costType" type="string" column="cost_type" />
+
+	</class>
+</hibernate-mapping>
